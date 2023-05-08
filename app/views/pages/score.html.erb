@@ -1,0 +1,15 @@
+<h1>YOUR SCORE: </h1>
+
+<% if @check_word %>
+  <b><p class="text-success">Congratulations! <%=@user_word  %> is an english word </p></b>
+<% else %>
+  <p class="text-danger"> Unfortunately <%= @user_word %> is not na english word</p>
+<% end  %>
+
+<% if @included %>
+  <b><p class="text-success">word is included </p></b>
+<% else %>
+  <p class="text-danger"> Word is not included </p>
+<% end  %>
+
+<a class="btn btn-warning" href="/new">Play Again</a>
